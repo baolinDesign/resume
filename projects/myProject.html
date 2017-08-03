@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>my project</title>
+    <style>
+        body,header,main,footer,h1,p,div,a,img,ul,ol,li,dd,dt{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        body{
+            font-family:"Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+            font-size: 14px;
+            text-align: center;
+            color: #87968e;
+            background-color:#fff2e3;
+        }
+        header{
+            margin-top: 50px;
+        }
+        header h1{
+            font-size: 42px;
+        }
+        header p{
+           opacity: 0.6; 
+           margin-top: 30px;
+        }
+        main{
+            display: inline-block;
+        }
+        .contain{
+            margin: 40px 0;
+        }
+        .btn{
+            display: inline-block;
+            margin: 3px;
+            padding: 6px 14px;
+            border-radius: 2px;
+            background-color: #72b890;
+            color: #fff;
+        }
+        .active{
+            opacity: 0.6;
+        }
+        .btn:hover{
+            background-color: #8ec3a0;
+        }
+        .direction{
+            margin-top: 30px;
+        }
+        .author{
+            margin-top: 20px;
+        }
+        .author a{
+            color: #72b890;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>我的项目</h1>
+        <p>一句话介绍</p>
+    </header>
+    <main>
+        <div class="contain">
+            <a class="btn active" href="#">项目一</a>
+            <a class="btn" href="#">项目二</a>
+            <a class="btn" href="#">项目三</a>
+            <a class="btn" href="#">项目四</a>
+            <a class="btn" href="#">项目五</a>
+        </div>
+        <img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/65d4aba2-a097-4b24-aaa0-ebbaf7eedab2" alt="">
+        <div class="direction">
+            <a class="btn" href="#">查看源码</a>
+            <a class="btn" href="#">使用说明</a>
+        </div>
+    </main>
+    <footer>
+        <div class="author">
+            作者:
+            <a  href="#">我</a>
+        </div>
+    </footer>
+</body>
+</html>
