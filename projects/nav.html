@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nav练习</title>
+    <style>
+        ul,li{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            color: #333;
+            text-decoration: none;
+        }
+        ul li{
+            list-style: none;
+        }
+        .clearfix::after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+        nav{
+            width: 600px;
+            margin: 0 auto;
+            background-color: #f1f1f1;
+            box-shadow: 0px 2px 6px #bebebe;
+        }
+        nav>ul>li{
+            float: left;
+            position: relative;
+        }
+        nav ul li a{
+            display: inline-block;
+            padding: 8px 16px;
+        }
+        nav ul li a:hover{
+            background-color: #ccc;
+        }
+        .two_nav{
+            position: absolute;
+            top: 100%;
+            box-shadow: 0px 2px 6px #bebebe;
+            display: none;
+        }
+        nav ul li:hover .two_nav{
+            display: block;
+        }
+        .two_nav a{
+            display: block;
+            min-width: 60px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="clearfix">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">作品</a></li>
+            <li>
+                <a href="#">更多</a>
+                <div class="two_nav">
+                    <a href="#">Githup</a>
+                    <a href="#">博客</a>
+                    <a href="#">知乎</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
