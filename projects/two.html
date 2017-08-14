@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .right{
+            width: 200px;
+            height: 500px;
+            background-color: green;
+            float:right;
+        }
+        .left{
+            width: calc(100% - 200px);
+            height: 500px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div style="color:#fff;">
+        <div class="right">我是固定宽度</div>
+        <div class="left">我是自适应</div>
+    </div>
+</body>
+</html>
