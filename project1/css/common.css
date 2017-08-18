@@ -1,11 +1,11 @@
-body,div,ul,ol,li,dd,dt,header,aside,main,section,footer,h1,h2,h3,h4,h5,h5,tr,td,th{
+body,div,ul,ol,li,dd,dt,header,aside,main,section,footer,h1,h2,h3,h4,h5,h5,h6,tr,td,th,p{
     margin: 0;
     padding: 0;
 }
 ul,ol{
     list-style: none;
 }
-.clearfix{
+.clearfix:after{
     display: block;
     content: "";
     clear: both;
@@ -28,4 +28,15 @@ a, a:hover, a:focus, a:active, a.active {
 ::selection {
     text-shadow: none;
     background: #ff6060;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.1;
+    color: inherit;
+}
+img{
+    border: 0; 
+    vertical-align: middle;
 }
