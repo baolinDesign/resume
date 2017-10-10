@@ -1,5 +1,5 @@
 main {
-  background: linear-gradient(to right top, rgba(38,50,105,0.78), rgba(255,152,0,0.45)), url(image/bg.jpg) center center no-repeat;
+  background: linear-gradient(to right top, rgba(38,50,105,0.78), rgba(255,152,0,0.45)), url(../image/bg.jpg) center center no-repeat;
   background-size:cover;
 }
 header {
@@ -13,11 +13,14 @@ header .login {
   font-size: 20px;
 }
 .modal {
-  width: 400px;
-  padding: 16px;
-  background-color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%)
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  width: 400px;
+  padding: 16px;
+  background-color: #fff;
+  
+  box-shadow: 0 3px 4px 5px rgba(0,0,0,0.2);
 }
