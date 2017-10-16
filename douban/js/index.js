@@ -30,9 +30,9 @@ function setData(data){
         <h2>霸王别姬</h2>\
         <div class="extra">\
           <span class="score">9.3分</span>\
-          /1000收藏\
+          /<span class="collect"></span>收藏\
         </div>\
-        <div class="extra">1994 / 剧情、爱情</div>\
+        <div class="extra"><span class="year"></span> / 剧情、爱情</div>\
         <div class="extra">导演：张艺谋</div>\
         <div class="extra">主演：副科级</div>\
       </div>\
@@ -42,7 +42,10 @@ function setData(data){
   $node.find(".cover img").attr("src",movie.images.small)
 
   $node.find(".detail h2").text(movie.title)
-  
+  $node.find(".score").text(movie.rating.average)
+  $node.find(".collect").text(movie.collect_count)
+  $node.find(".year").text(movie.year)
+
   $("section").eq(0).append($node)
   })
 }
