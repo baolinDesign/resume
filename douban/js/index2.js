@@ -196,7 +196,6 @@ var search = {
   },
   getData:function(callback){
     var _this = this;
-    
     _this.$element.find(".loading").show();
     $.ajax({
       url: "//api.douban.com/v2/movie/search",  
