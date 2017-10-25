@@ -47,6 +47,7 @@ var top250 = {
     });
   },
   render: function(data){
+    console.log(data);
     var _this = this;
     data.subjects.forEach(function(movie) {
         var tpl ='<div class="item">\
@@ -216,6 +217,7 @@ var search = {
     console.log(data);
     var _this = this;
     data.subjects.forEach(function(movie) {
+
         var tpl ='<div class="item">\
         <a href="#">\
           <div class="cover">\
