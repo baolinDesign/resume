@@ -7,7 +7,7 @@ a{
   text-decoration: none;
   color: #333;
 }
-html, body{
+html, body,main{
   height: 100%;
   position: relative;
 }
@@ -18,7 +18,7 @@ body{
 }
 
 main>section{
-  height: calc(100% - 50px);
+  height: calc(100% - 45px);
   overflow: scroll;
   padding: 10px;
   -webkit-overflow-scrolling: touch;
