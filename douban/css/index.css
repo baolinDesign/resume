@@ -20,6 +20,7 @@ body{
 main>section{
   height: calc(100vh - 50px);
   overflow: scroll;
+  padding: 10px;
   -webkit-overflow-scrolling: touch;
   display: none;
   background-color: #fff;
