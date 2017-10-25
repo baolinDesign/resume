@@ -18,7 +18,7 @@ body{
 }
 
 main>section{
-  height: calc(100vh - 50px);
+  height: calc(100% - 50px);
   overflow: scroll;
   padding: 10px;
   -webkit-overflow-scrolling: touch;
@@ -102,7 +102,7 @@ section .search-area .button{
 footer {
   position: absolute;
   bottom: 0;
-  height: 50px;
+  height: 45px;
   width: 100%;
   background-color: #fff;
   border-top: 1px solid #ccc;
@@ -110,11 +110,13 @@ footer {
 }
 footer>div {
   flex: 1;
+  font-size: 12px;
+  color: #666;
+  padding-top: 6px;
   text-align: center
 }
 footer>div>span{
   display: block;
-  padding-top: 5px;
 }
 footer .active{
   color: #ff5722;
