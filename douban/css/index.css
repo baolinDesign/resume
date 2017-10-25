@@ -28,25 +28,7 @@ main>section{
 main>section:first-child{
   display: block;
 }
-footer {
-  position: absolute;
-  bottom: 0;
-  height: 50px;
-  width: 100%;
-  border-top: 1px solid #ccc;
-  display: flex;
-}
-footer>div {
-  flex: 1;
-  text-align: center
-}
-footer>div>span{
-  display: block;
-  padding-top: 5px;
-}
-footer .active{
-  color: #ff5722;
-}
+
 
 .item {
   border-bottom: 1px solid #ccc;
@@ -91,7 +73,7 @@ footer .active{
 
 
 #search {
-  height: calc(100% - 45px);
+  height: calc(100% - 50px);
 }
 section .search-area{
   color: #333;
@@ -116,4 +98,24 @@ section .search-area .button{
   color: #fff;
   border-radius: 2px;
   cursor: pointer;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  display: flex;
+}
+footer>div {
+  flex: 1;
+  text-align: center
+}
+footer>div>span{
+  display: block;
+  padding-top: 5px;
+}
+footer .active{
+  color: #ff5722;
 }
