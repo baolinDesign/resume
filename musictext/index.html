@@ -133,19 +133,94 @@
   </ul>
   </div>
   <script>
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET","//music.json",true);
-    xhr.onload = function(){
-      if((xhr.status >= 200 && xhr.status <300) || xhr.status === 304){
-        console.log(this.responseText);
-      }else{
-        console.log("获取数据失败");
-      }
+    var musicList =[]
+    var currentIndex = 0;
+    var audio = new Audio();
+    audio.autoplay = true;
+
+
+
+    getMusicList(function(list){
+      musicList = list
+      console.log(list)
+      loadMusic(list[currentIndex])
+    })
+
+    audio.ontimeupdate = function(){
+      console.log(this.currentTime)
+      $(".musicbox .progress-now").style.width = (this.currentTime/this.duration)*100 + "%";
+      
     }
-    xhr.onerror = function(){
-        console.log("网络异常")
+
+    audio.onplay =function(){}
+      clock = setInterval(function(){
+        var min = Math.floor(this.currentTime/60);
+        var sec = Math.floor(this.currentTime%60) + "";
+        sec = sec.length === 2? sec :"0"+ sec;
+        $(".musicbox .time").innerText = min + ":" + sec ;
+      },1000)
+    
+    audio.onpause = function(){
+      clearInterval(clock)
+    }
+
+    $(".musicbox .play").onclick = function(){
+      if(audio.paused){
+        audio.play()
+        this.querySelector(".fa").classList.remove("fa-play")
+        this.querySelector(".fa").classList.add("fa-pause")
+      }else{
+        audio.pause();
+        this.querySelector(".fa").classList.remove("fa-pause")
+        this.querySelector(".fa").classList.add("fa-play")
+      } 
+    }
+
+    $(".music .forward").onclick = function(){
+      currentIndex = (++currentIndex%musicList.length)
+      loadMusic(musicList[currentIndex])
+    }
+
+
+    function $(selector){
+      return document.querySelector(selector);
+    }
+    function getMusicList(callback){
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET","music.json",true);
+      xhr.onload = function(){
+        if((xhr.status >= 200 && xhr.status <300) || xhr.status === 304){
+         
+          callback(JSON.parse(this.responseText))
+        }else{
+          console.log("获取数据失败");
+        }
       }
-    xhr.send()
+      xhr.onerror = function(){
+          console.log("网络异常")
+          console.log(xhr.status)
+        }
+      xhr.send()
+    }
+
+    function loadMusic(musicObj){
+      console.log("begin play", musicObj)
+      $(".musicbox .title").innerText = musicObj.title;
+      $(".musicbox .auther").innerText = musicObj.auther;
+
+      audio.src = musicObj.src;
+
+    }
+   
+    
+
+
+
+
+
+
+
+
   </script>
 </body>
 </html>
