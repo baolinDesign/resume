@@ -257,7 +257,7 @@ var search = {
         });
         return actArr.join("、");
       });
-      _this.$element.find(".search-area").append($node);
+      _this.$element.find(".search-result").append($node);
     });    
   },
 };
