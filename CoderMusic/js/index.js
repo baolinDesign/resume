@@ -70,7 +70,7 @@ var Footer = {
     },
     render: function(){
         var _this = this;
-        $.getJSON("//jirenguapi.applinzi.com/fm/getChannels.php")//jirenguapi.applinzi.com/fm/getChannels.php //jirenguapi.applinzi.com/fm/getChannels.php
+        $.getJSON("https://jirenguapi.applinzi.com/fm/getChannels.php")//jirenguapi.applinzi.com/fm/getChannels.php //jirenguapi.applinzi.com/fm/getChannels.php
         .done(function(ret){
             console.log(ret)
             _this.renderFooter(ret.channels)
@@ -145,14 +145,21 @@ var Music = {
         this.audio.addEventListener("pause",function(){
             clearInterval(_this.statusClock)
         })
-        this.audio.addEventListener("end", function(){
-            console.log('pause')
-            _this.loadMusic()
+
+        this.$container.find(".bar").on("click",function(e){
+            var _this = this
+            var percent = e.offsetX / parseInt(getComputedStyle(this).width);
+            Music.audio.currentTime = Music.audio.duration*percent
+            console.log(Music.audio.duration)
+        })
+
+        this.audio.addEventListener("ended", function(){
+            _this.loadMusic();
         })
     },
     loadMusic(callback) {
         var _this = this
-        $.getJSON("//jirenguapi.applinzi.com/fm/getSong.php",{channel: this.channelId})
+        $.getJSON("https://jirenguapi.applinzi.com/fm/getSong.php",{channel: this.channelId})
         .done(function(ret){
              _this.song = ret["song"][0];
              _this.setMusic();
@@ -161,7 +168,7 @@ var Music = {
     },
     loadLyric(){
         var _this = this
-        $.getJSON("//jirenguapi.applinzi.com/fm/getLyric.php",{sid:this.song.sid})
+        $.getJSON("https://jirenguapi.applinzi.com/fm/getLyric.php",{sid:this.song.sid})
         .done(function(ret){ 
             var lyric = ret.lyric;
             var lyricObj = {}
