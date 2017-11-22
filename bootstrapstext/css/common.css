@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+    font-family: "open sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font: 14px/1.5;
+    color: #676a6c;
+    overflow-x: hidden;
+}
+body, body.side-bar ,html{
+    height: 100%;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #999;
+}
+::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
