@@ -6,10 +6,19 @@ body {
     color: #676a6c;
     overflow-x: hidden;
 }
-body, body.side-bar ,html{
+body, body.mourui-bar ,html{
     height: 100%;
 }
-
+li{
+    list-style: none;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
 
 ::-webkit-scrollbar {
     width: 6px;

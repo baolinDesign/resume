@@ -1,1 +1,128 @@
 @charset "UTF-8";
+/* 头部 */
+.mourui-admin{
+    height: 100%;
+}
+.mourui-admin .mourui-header {
+    height: 70px;
+    background-color: #191a1e;
+}
+.mourui-header, .mourui-main {
+    position: relative;
+}
+.mourui-main {
+    width: auto;
+    margin: 0 15px;
+}
+.logo {
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+.mourui-header .logo {
+    left: 20px;
+}
+.mourui-header .logo img {
+    height: 46px;
+}
+/* 头部结束 */
+
+.mourui-admin .mourui-contain {
+    width: 100%;
+    height: -moz-calc(100% - 70px);
+    height: -webkit-calc(100% - 70px);
+    height: calc(100% - 70px);
+    background-color: #f5f5f5;
+    
+}
+.mourui-side {
+    width: 220px;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #25272e;
+}
+.mourui-nav {
+    position: relative;
+    padding: 0 20px;
+    background-color: #25272e;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 0;
+    box-sizing: border-box;
+}
+.mourui-nav, .mourui-nav-tree {
+    width: 220px;
+    padding: 0;
+}
+.mourui-nav-tree .mourui-nav-item {
+    line-height: 40px;
+    display: block;
+    width: 100%;
+}
+.mourui-nav .mourui-nav-item {
+    position: relative;
+    vertical-align: middle;
+}
+.mourui-nav * {
+    font-size: 14px;
+}
+.mourui-nav a{
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+.mourui-nav-tree a{
+    height: 45px;
+    line-height: 45px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.mourui-nav-itemd {
+    color: #fff;
+}
+.mourui-this {
+    background-color: #1ab394;
+    color: #fff;
+}
+
+/* 组件主体开始 */
+.mourui-body {
+    margin: 10px 0;
+}
+.mourui-content {
+    position: absolute;
+    left: 220px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 998;
+    width: auto;
+    overflow: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+.mourui-site {
+    top: 70px;
+}
+/* .mourui-field{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e6e6e6;
+} */
+.mourui-content-main{
+    margin: 15px;
+}
+.mourui-button {
+    margin: 30px 0;
+}
+.con-border {
+    border-radius: 2px;
+}
+
+.carousel-width {
+    width: 40%;
+}
