@@ -58,9 +58,11 @@
                     <a href="">表格</a>
                 </dd>
                 <dd class="">
+                    <a href="">表格</a>
+                </dd>
+                <dd class="">
                     <a href="">轮播</a>
                 </dd>
-                
               </dl>
             </li>
             <li></li>
@@ -70,6 +72,7 @@
         <main class="mourui-body">
           <div class="mourui-content mourui-site">
             <div class="mourui-content-main">
+              <!-- 按钮效果 -->
                 <fieldset class="mourui-button mourui-field">
                   <legend>按钮效果</legend>
                     <div>
@@ -81,25 +84,26 @@
                         <a class="btn btn-danger con-border" href="#" role="button">新建</a>
                     </div>
                 </fieldset>
+                <!-- 表单效果 -->
                 <fieldset class="mourui-button mourui-field">
                     <legend>表单</legend>
                     <form class="form-inline" action="">
                       <div class="form-group">
-                        <label for="exampleInputName2">单行输入框</label>
+                        <label for="exampleInputName2"><span class="mourui-label">单行输入框</span></label>
                         <input type="text" class="form-control con-border" id="exampleInputName2" placeholder="请输入标题">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail2">邮箱</label>
+                        <label for="exampleInputEmail2"><span class="mourui-label">邮箱</span></label>
                         <input type="email" class="form-control con-border" id="exampleInputEmail2" placeholder="请输入邮箱">
                       </div>        
                     </form>
                     <form>
                       <div class="form-group">
-                        <label for="exampleInputEmail1">请输入邮箱</label>
+                        <label for="exampleInputEmail1"><span class="mourui-label">请输入邮箱</span></label>
                         <input type="email" class="form-control con-border" id="exampleInputEmail1" placeholder="请输入邮箱">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputPassword1">密码</label>
+                        <label for="exampleInputPassword1"><span class="mourui-label">密码</span></label>
                         <input type="password" class="form-control con-border" id="exampleInputPassword1" placeholder="请输入密码">
                       </div>
                       <div class="form-group">
@@ -114,18 +118,26 @@
                       <button type="submit" class="btn btn-default">提交</button>
                     </form>
                 </fieldset>
+                <!-- 下拉列表效果 -->
                 <fieldset class="mourui-button mourui-field">
                   <legend>下拉列表</legend>
+                  
                     <div>
+                      <span class="mourui-label">所属一级分类</span>
                       <select class="form-control con-border">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option>请选择</option>
+                        <option>办公室</option>
+                        <option>工业厂房</option>
+                        <option>户型</option>
+                        <option>默认空白场景</option>
+                        <option>社会</option>
+                        <option>住宅</option>
+                        <option>无标签</option>
                       </select>
                     </div>
+                    
                 </fieldset>
+                <!-- 轮播效果 -->
                 <fieldset class="mourui-button mourui-field">
                   <legend>轮播</legend>
                   <div id="carousel-example-generic" class="carousel slide carousel-width" data-ride="carousel">
@@ -166,7 +178,95 @@
                     </a>
                   </div>
                 </fieldset>
-                
+                <!-- 表格效果 -->
+                <fieldset class="mourui-button mourui-field">
+                    <legend>表格效果</legend>
+                    
+                      <div>
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>序号</th>
+                                <th>ID</th>
+                                <th>标签名称</th>
+                                <th>所含物品标签</th>
+                                <th>状态</th>
+                                <th>录入者</th>
+                                <th>录入时间</th>
+                                <th>操作</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>1</th>
+                                <td>8a938ff05f6c0a02015f6c0b93310001</td>
+                                <td>1</td>
+                                <td>湖南省</td>
+                                <td>启用</td>
+                                <td>admin</td>
+                                <td>2017-10-30 14:50:18</td>
+                                <td>
+                                  <a href="#">禁用</a>
+                                  <a href="#">编辑</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>8a938ff05f6c0a02015f6c0b93310001</td>
+                                <td>1</td>
+                                <td>湖南省</td>
+                                <td>启用</td>
+                                <td>admin</td>
+                                <td>2017-10-30 14:50:18</td>
+                                <td>
+                                  <a href="#">禁用</a>
+                                  <a href="#">编辑</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>8a938ff05f6c0a02015f6c0b93310001</td>
+                                <td>1</td>
+                                <td>湖南省</td>
+                                <td>启用</td>
+                                <td>admin</td>
+                                <td>2017-10-30 14:50:18</td>
+                                <td>
+                                  <a href="#">禁用</a>
+                                  <a href="#">编辑</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>8a938ff05f6c0a02015f6c0b93310001</td>
+                                <td>1</td>
+                                <td>湖南省</td>
+                                <td>启用</td>
+                                <td>admin</td>
+                                <td>2017-10-30 14:50:18</td>
+                                <td>
+                                  <a href="#">禁用</a>
+                                  <a href="#">编辑</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>8a938ff05f6c0a02015f6c0b93310001</td>
+                                <td>1</td>
+                                <td>湖南省</td>
+                                <td>启用</td>
+                                <td>admin</td>
+                                <td>2017-10-30 14:50:18</td>
+                                <td>
+                                  <a href="#">禁用</a>
+                                  <a href="#">编辑</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                      
+                  </fieldset>
             </div> 
           </div>
         </main>

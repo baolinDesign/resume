@@ -126,3 +126,12 @@
 .carousel-width {
     width: 40%;
 }
+.mourui-label {
+    width: 100px;
+    text-align: left;
+    display: inline-block;
+}
+.form-control {
+    display: inline-block;
+    width: 80%;
+}
