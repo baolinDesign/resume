@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-bind 实例</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>v-bind 实例</h1>
+    <hr>
+    <div id="app">
+            <p><img v-bind:src="imgSrc"></p>
+            <p><a :href="webUrl" target="_blank">技术胖</a></p>
+    </div>
+    <div :class="className">1、绑定css</div>
+    <style>
+        .classA{
+            color: red;
+        }
+        .classB{
+            font-size: 150%;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el:"#app",
+            data:{
+                imgSrc:"http://jspang.com/wp-content/uploads/2017/08/reactdi.jpg",
+                webUrl:"http://jspang.com",
+                className:"classA"
+            }
+        })
+    </script>
+</body>
+</html>
